@@ -1,6 +1,5 @@
 from ast import Str
 import os
-from tkinter.tix import INTEGER
 from unittest.util import strclass
 from flask import Flask, request, jsonify, abort
 from sqlalchemy import exc
