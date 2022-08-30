@@ -62,7 +62,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
 
 The project uses Auth0 as a third-party authentication system. 
 The bearer tokens needed for running the api are saved in setup.sh file but they may be expired.
-To generate new valid tokens: go to https://dev-4xm89r5o.us.auth0.com/authorize?audience=capstone_login&response_type=token&client_id=8s5THOjrKG8B7npwzi0t4KfHyopyxJMc&redirect_uri=http://127.0.0.1:5000/actors to get corresponding tokens:
+To generate new valid tokens: go to https://dev-4xm89r5o.us.auth0.com/authorize?audience=capstone_login&response_type=token&client_id=8s5THOjrKG8B7npwzi0t4KfHyopyxJMc&redirect_uri=http://127.0.0.1:5000/redirect to get corresponding tokens:
   - To get bearer token of Casting Assistant:
      login account: Casting_Assistant@outlook.com 
            passwaord:saltywater9707!
