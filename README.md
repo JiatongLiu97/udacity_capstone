@@ -178,7 +178,7 @@ DELETE '/movies/${id}'
 ```json
 {
   "success": True,
-  "name": 'new_actor'
+  "name": "new_actor"
 }
 ```
 
@@ -215,7 +215,7 @@ DELETE '/movies/${id}'
 ```json
 {
   "success": True,
-  "name": 'actor_edited'
+  "name": "actor_edited"
 }
 ```
 
