@@ -120,7 +120,7 @@ GET '/movies'
 - Request Arguments: None
 - Returns: An jason object with keys: 'success' and 'movies'. 'movies' key contains all movie objects exsiting in database.
 - example response:
-```json
+```
 {
   "movies": [
     {
@@ -144,7 +144,7 @@ DELETE '/actors/${id}'
 - Deletes a specified actor using the id of the actor
 - Request Arguments: id - integer
 - Returns: a jason object:
-```json
+```
 {
   "success": True,
   "deleted id": id
@@ -157,7 +157,7 @@ DELETE '/movies/${id}'
 - Deletes a specified movie using the id of the movie
 - Request Arguments: id - integer
 - Returns: a jason object:
-```json
+```
 {
   "success": True,
   "deleted id": id
@@ -167,7 +167,7 @@ DELETE '/movies/${id}'
 #### POST /actors
 - Sends a post request in order to post an new actor
 - Request Body: a jason object of the new actor
-```json
+```
 {
   "name": "new_actor",
   "age": 20,
@@ -175,9 +175,9 @@ DELETE '/movies/${id}'
 }
 ```
 - Returns: a jason object refelcting the name of the newly added actor
-```json
+```
 {
-  "success": True,
+  "success": true,
   "name": "new_actor"
 }
 ```
@@ -185,14 +185,14 @@ DELETE '/movies/${id}'
 #### POST /movies
 - Sends a post request in order to post an new movie
 - Request Body: a jason object of the new movie
-```json
+```
 {
   "title": "new_title",
   "release_data": "2022-11-1"
 }
 ```
 - Returns: a jason object refelcting the title of the newly added actor
-```json
+```
 {
   "success": True,
   "title": "new_title"
@@ -204,7 +204,7 @@ DELETE '/movies/${id}'
 - Sends a patch request in order to edit a specified actor based on the actor's id
 - Request Arguments: id - integer, which is the id of the actor
 - Request Body: a jason object containing parameters to edit
-```json
+```
 {
   "name": "name_to_edit",
   "age": None,
@@ -212,7 +212,7 @@ DELETE '/movies/${id}'
 }
 ```
 - Returns: a jason object refelcting the name of the edited actor
-```json
+```
 {
   "success": True,
   "name": "actor_edited"
@@ -224,14 +224,14 @@ DELETE '/movies/${id}'
 - Sends a patch request in order to edit a specified movie based on the movie's id
 - Request Arguments: id - integer, which is the id of the movie
 - Request Body: a jason object containing parameters to edit
-```json
+```
 {
   "title": "title_to_edit",
   "release_date": None
 }
 ```
 - Returns: a jason object refelcting the name of the edited actor
-```json
+```
 {
   "success": True,
   "title": "movie_edited"
@@ -241,13 +241,11 @@ DELETE '/movies/${id}'
 ## How to run the tests
 
 Firstly, you need to create a new test database in your local postgresql
-```json
+```
 create database capstone_test;
 ```
 Replace DATABASE_TEST_URL in setup.sh with your own DATABASE_TEST_URL
 Run tests
-```json
-python test_app.py
 ```
-
+python test_app.py
 ```
