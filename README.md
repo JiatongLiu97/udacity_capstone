@@ -240,7 +240,8 @@ DELETE '/movies/${id}'
 
 ## How to run the tests
 
-Firstly, you need to create a new test database in your local postgresql
+Firstly,make sure your server is running.
+Then you need to create a new test database in your local postgresql
 ```
 create database capstone_test;
 ```
@@ -249,3 +250,7 @@ Run tests
 ```
 python test_app.py
 ```
+
+Or you can use Postman or Curl to test the API.
+
+GOOD LUCK!
