@@ -146,8 +146,8 @@ DELETE '/actors/${id}'
 - Returns: a jason object:
 ```json
 {
-  'success': True,
-  'deleted id': id
+  "success": True,
+  "deleted id": id
 }
 ```
 
@@ -159,8 +159,8 @@ DELETE '/movies/${id}'
 - Returns: a jason object:
 ```json
 {
-  'success': True,
-  'deleted id': id
+  "success": True,
+  "deleted id": id
 }
 ```
 
@@ -169,31 +169,35 @@ DELETE '/movies/${id}'
 - Request Body: a jason object of the new actor
 ```json
 {
-  'name': "new_actor",
-  'age': 20,
-  'gender': "female",
+  "name": "new_actor",
+  "age": 20,
+  "gender": "female",
 }
 ```
 - Returns: a jason object refelcting the name of the newly added actor
+```json
 {
-  'success': True,
-  'name': 'new_actor'
+  "success": True,
+  "name": 'new_actor'
 }
+```
 
 #### POST /movies
 - Sends a post request in order to post an new movie
 - Request Body: a jason object of the new movie
 ```json
 {
-  'title': "new_title",
-  'release_data': "2022-11-1"
+  "title": "new_title",
+  "release_data": "2022-11-1"
 }
 ```
 - Returns: a jason object refelcting the title of the newly added actor
+```json
 {
-  'success': True,
-  'title': 'new_title'
+  "success": True,
+  "title": "new_title"
 }
+```
 
 #### PATCH /actors/\<int:id\>
 
@@ -202,16 +206,18 @@ DELETE '/movies/${id}'
 - Request Body: a jason object containing parameters to edit
 ```json
 {
-  'name': "name_to_edit",
-  'age': None,
-  'gender': None,
+  "name": "name_to_edit",
+  "age": None,
+  "gender": None,
 }
 ```
 - Returns: a jason object refelcting the name of the edited actor
+```json
 {
-  'success': True,
-  'name': 'actor_edited'
+  "success": True,
+  "name": 'actor_edited'
 }
+```
 
 #### PATCH /movies/\<int:id\>
 
@@ -220,12 +226,28 @@ DELETE '/movies/${id}'
 - Request Body: a jason object containing parameters to edit
 ```json
 {
-  'title': "title_to_edit",
-  'release_date': None
+  "title": "title_to_edit",
+  "release_date": None
 }
 ```
 - Returns: a jason object refelcting the name of the edited actor
+```json
 {
-  'success': True,
-  'title': 'movie_edited'
+  "success": True,
+  "title": "movie_edited"
 }
+```
+
+## How to run the tests
+
+Firstly, you need to create a new test database in your local postgresql
+```json
+create database capstone_test;
+```
+Replace DATABASE_TEST_URL in setup.sh with your own DATABASE_TEST_URL
+Run tests
+```json
+python test_app.py
+```
+
+```
